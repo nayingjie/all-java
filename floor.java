@@ -11,37 +11,17 @@ public class floor {
         System.out.println("Enter the dimensions of the floor. [w*h]");
         dimensions = a.next();
         String[] wh = dimensions.split("\\*");
-        
         float w = Float.parseFloat(wh[0]);
         float h = Float.parseFloat(wh[1]);
         float f = (w*h);
-
         System.out.println("Assuming square tile, enter its side length.");
         String xb = b.next();
         System.out.println("Enter the cost of one tile.");
         String yb = c.next();
-        
         float x = Float.parseFloat(xb);
         float y = Float.parseFloat(yb);
-        
         float e = (x*x);
         float z = (f/e);
-        
-        if (f%e != 0) {
-            System.out.println("NOT A WHOLE");
-            double j = Math.ceil(z) - 1;
-            double d = z - j;
-            double l = 1 - d; 
-            z = Math.round(z);
-            System.out.println(d);
-            DecimalFormat df = new DecimalFormat("#######");
-            String zz = df.format(z);
-            System.out.println(zz);
-            
-            boolean isWhole = false;
-        } else {
-            z = Math.round(z);
-        }
         float m = (z*y);
         double v = m;
         Locale lc = new Locale("en", "US");
